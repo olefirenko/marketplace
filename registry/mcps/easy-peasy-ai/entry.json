@@ -1,0 +1,41 @@
+{
+  "$schema": "../../../schemas/mcp.schema.json",
+  "id": "easy-peasy-ai",
+  "type": "mcp",
+  "name": "Easy-Peasy.AI",
+  "tagline": "AI text, images, video, speech and transcripts in any chat",
+  "description": "Easy-Peasy.AI's hosted MCP server brings the platform's AI tools into Claude, ChatGPT, Cursor, VS Code, Gemini CLI and any other MCP client. Write with 200+ templates for blog posts, ads, product descriptions and emails. Generate or edit images with models such as Nano Banana, FLUX, Seedream and GPT Image. Make videos from text or an image with Veo, Kling, Seedance and MiniMax. Turn text into speech with 1,000+ voices, including cloned voices, and transcribe audio, video files and links from YouTube, TikTok, Instagram or X with speaker labels.\n\nEverything runs on your Easy-Peasy.AI account with the same credits and plan limits as the web app. Connecting is free; image generation and transcription need a paid plan.",
+  "author": {
+    "name": "Easy-Peasy.AI",
+    "url": "https://easy-peasy.ai"
+  },
+  "homepage": "https://easy-peasy.ai/mcp",
+  "repo": "https://github.com/Easy-Peasy-AI/easy-peasy-mcp",
+  "icon": "https://raw.githubusercontent.com/Easy-Peasy-AI/easy-peasy-mcp/main/assets/logo-400.png",
+  "tags": [
+    "creative",
+    "marketing",
+    "productivity"
+  ],
+  "verified": false,
+  "featured": false,
+  "install": {
+    "args": [
+      "easy-peasy-ai",
+      "--transport",
+      "http",
+      "https://easy-peasy.ai/mcp",
+      "--header",
+      "x-api-key: <EASY_PEASY_API_KEY>"
+    ],
+    "env": [
+      {
+        "name": "EASY_PEASY_API_KEY",
+        "required": true,
+        "description": "Easy-Peasy.AI API key for the x-api-key header. Any account can create one at https://easy-peasy.ai/settings/api.",
+        "url": "https://easy-peasy.ai/settings/api"
+      }
+    ],
+    "notes": "Create an API key at https://easy-peasy.ai/settings/api and put it in place of <EASY_PEASY_API_KEY> in the x-api-key header (MCP settings). Videos and transcriptions run in the background: the start tool returns an ID right away, and the matching get_ tool checks on it."
+  }
+}
